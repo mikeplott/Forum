@@ -1,0 +1,4 @@
+-1|Alice|Hello
+0|Bob|Hi Alice
+1|Charlie|Hi bob
+0|Charlie|Hi Alice
