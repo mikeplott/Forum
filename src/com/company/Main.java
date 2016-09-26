@@ -15,7 +15,7 @@ public class Main {
         int replyId = -1;
         while (true) {
             printPosts(posts, replyId);
-            replyId = readId(consoleScanner);
+            replyId = readId(consoleScanner.nextLine());
         }
     }
 
@@ -35,11 +35,6 @@ public class Main {
     }
 
     public static void printPosts(ArrayList<Post> posts, int replyId) {
-        //            for (Post post : posts) {
-//                if (post.replyId == replyId) {
-//                    System.out.printf("[%s] %s by %s\n" replyId + 1, post.text, post.author);
-//                }
-        //}
         System.out.println("Posts replying to " + replyId);
         for (int i = 0; i < posts.size(); i++) {
             Post post = posts.get(i);
@@ -49,8 +44,20 @@ public class Main {
         }
     }
 
-    public static int readId(Scanner consoleScanner) {
+    public static int readId(String input) {
         System.out.println("Type the id you want to see replies to:");
-        return Integer.valueOf(consoleScanner.nextLine());
+        return Integer.valueOf(input);
     }
 }
+
+
+
+
+
+
+
+//            for (Post post : posts) {
+//                if (post.replyId == replyId) {
+//                    System.out.printf("[%s] %s by %s\n" replyId + 1, post.text, post.author);
+//                }
+//}
